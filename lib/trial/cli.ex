@@ -14,8 +14,8 @@ defmodule Trial.CLI do
   end
 
   def process({url}) do
-    HttPoison.JSONFetch.fetchtodos(url)
-    |> HttPoison.ExtractData.extract_required  # Extracting data
+    Trial.JSONFetch.fetchtodos(url)
+    |> Trial.ExtractData.extract_required  # Extracting data
   end
   def process(:help) do
     IO.puts """

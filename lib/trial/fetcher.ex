@@ -1,9 +1,9 @@
-defmodule trial.JSONFetch do
-  def fetchtodos(search_term) do
-    search_term
-    |> trial.get  # fetching data
+defmodule Trial.JSONFetch do
+  def fetchtodos(url) do
+    url
+    |> HTTPoison.get  # fetching data
     |> handle_json    # parsing data using Poison.Parser.parse!(body)
-    |> IO.inspect
+    # |> IO.inspect
   end
   def handle_json({:ok, %{status_code: 200, body: body }}) do
     {:ok, Poison.Parser.parse!(body)}

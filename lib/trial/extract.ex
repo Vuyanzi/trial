@@ -1,4 +1,4 @@
-defmodule trial.ExtractData do
+defmodule Trial.ExtractData do
  def extract_required(map) do
     {:ok, body} = map
     IO.puts "Todo title is: " <> body["title"]
