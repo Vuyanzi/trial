@@ -12,7 +12,7 @@ defmodule Trial.MixProject do
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
+  # Run "mix help compile.app" to learn about applications.meme
   def application do
     [
       extra_applications: [:logger, :httpoison]
